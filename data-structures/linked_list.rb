@@ -14,7 +14,7 @@ class Node
   end
 end
 
-# Class to add items to the list
+# Linked list
 class LinkedList
   attr_accessor :head
 
