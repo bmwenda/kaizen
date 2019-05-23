@@ -1,10 +1,10 @@
-# A linked list is a linear data structure
+# A singly linked list is a linear data structure
 # each element is an object (node) comprising of:
 #   - data (value of the element)
 #   - a reference to the next item
 # the next address reference for the last item is NULL
 
-# Constructer for node containing data and next address reference
+# Constructor for node containing data and next address reference
 class Node
   attr_accessor :next_item
 
