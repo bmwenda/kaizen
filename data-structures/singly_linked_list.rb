@@ -6,7 +6,7 @@
 
 # Constructor for node containing data and next address reference
 class Node
-  attr_accessor :next_item
+  attr_accessor :data, :next_item
 
   def initialize(data, next_item = nil)
     @data = data
@@ -32,6 +32,19 @@ class LinkedList
     end
     # Add the new node at the end of the list
     current_item.next_item = Node.new(value)
+  end
+
+  def delete(value)
+    if head.data == value
+      self.head = head.next_item
+      return
+    end
+
+    current_item = head
+    while current_item.next_item && current_item.next_item.data != value
+      current_item = current_item.next_item
+    end
+    current_item.next_item = current_item.next_item.next_item
   end
 
   def items
