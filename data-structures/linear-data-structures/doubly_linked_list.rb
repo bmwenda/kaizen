@@ -68,4 +68,20 @@ class DoublyLinkedList
     end
     elements << current
   end
+
+  def reverse_traversal
+    current = head
+    elements = []
+    while !current.previous_node.nil?
+      elements << current
+      current = current.previous
+    end
+    elements << current
+  end
 end
+
+ll = DoublyLinkedList.new(1)
+ll.tail_insertion(2)
+ll.tail_insertion(3)
+
+p ll.reverse_traversal
