@@ -16,24 +16,27 @@ class Node
   end
 end
 
-root = Node.new(1)
-root.left_child = Node.new(2)
-root.right_child = Node.new(3)
+class BinaryTree
+  attr_accessor :root
 
-# creates a tree as below
-#                1
-#              /   \
-#            2       3
-#          /   \    /  \
-#        nil   nil nil nil
+  def initialize(value)
+    @root = Node.new(value)
+  end
 
-root.left_child.left_child = Node.new(4)
-# resulting tree
+  def construct
+    Node.new(1) unless root
+    root.left_child = Node.new(2)
+    root.right_child = Node.new(3)
+    root.left_child.left_child = Node.new(4)
+    root.left_child.right_child = Node.new(5)
+    root.right_child.left_child = Node.new(6)
 
-#                1
-#              /   \
-#            2       3
-#           /  \    /  \
-#         4    nil nil  nil
-#        / \
-#      nil nil
+    # resulting tree
+
+    #                1
+    #              /   \
+    #            2       3
+    #           /  \    /
+    #         4     5  6
+  end
+end
