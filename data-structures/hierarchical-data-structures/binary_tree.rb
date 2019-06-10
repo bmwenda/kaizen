@@ -7,6 +7,7 @@
 # The children are named left child and right child
 
 class Node
+  attr_reader :value
   attr_accessor :left_child, :right_child
 
   def initialize(value)
@@ -38,5 +39,39 @@ class BinaryTree
     #            2       3
     #           /  \    /
     #         4     5  6
+  end
+
+  # root->left->right order
+  # Recursively traverse left subtree from root up to the left most leaf
+  # Traverse back to last parent with a right child
+  # Repeat steps 1 and 2 until all nodes have been covered
+  # Traverse back up to root and repeat for right subtree
+  def preorder(node)
+    # 1->2->4->5->3->6
+    if node
+      print node.value.to_s + '->'
+      preorder(node.left_child)
+      preorder(node.right_child)
+    end
+  end
+
+  # left->root->right order
+  def inorder(node)
+    # 4->2->5->1->6->3
+    if node
+      inorder(node.left_child)
+      print node.value.to_s + '->'
+      inorder(node.right_child)
+    end
+  end
+
+  # left->right->root
+  def postorder(node)
+    # 4->5->2->6->3->1
+    if node
+      postorder(node.left_child)
+      postorder(node.right_child)
+      print node.value.to_s + '->'
+    end
   end
 end
