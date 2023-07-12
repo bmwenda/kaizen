@@ -25,7 +25,7 @@ class SinglyLinkedCircularList
       @head = new_node
     else
       # Insert new node after the current head
-      # Make it's next node point to the head's next node
+      # Make its next node point to the head's next node
       new_node.next_node = @head.next_node
       @head.next_node = new_node
       @head.data = new_node.data

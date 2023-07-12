@@ -1,5 +1,4 @@
-# A BST is a binary tree structure
-# It has these properties
+# Has these properties
 #   - Left subtree of a node has a key less than it's parent key
 #   - Left subtree of a node has a key less than it's parent key
 #   - There are no duplicates

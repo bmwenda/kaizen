@@ -1,5 +1,4 @@
-# A singly linked list is a linear data structure
-# each element is an object (node) comprising of:
+# Each element is an object (node) comprising of:
 #   - data (value of the element)
 #   - a reference to the next item
 # the next address reference for the last item is NULL

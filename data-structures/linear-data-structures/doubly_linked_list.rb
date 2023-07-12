@@ -1,4 +1,3 @@
-# A doubly linked list is a linear data structure
 # Each node contains:
 #   - reference to the next node
 #   - reference to the previous node
@@ -79,9 +78,3 @@ class DoublyLinkedList
     elements << current
   end
 end
-
-ll = DoublyLinkedList.new(1)
-ll.tail_insertion(2)
-ll.tail_insertion(3)
-
-p ll.reverse_traversal
